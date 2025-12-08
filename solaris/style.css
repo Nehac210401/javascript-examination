@@ -5,7 +5,8 @@
 }
 
 body {
-    background: floralwhite;
+    background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
+;
     width: 1440px;
     height: 100vh;
     overflow: overflow;
@@ -139,6 +140,21 @@ ul{
     top: 417px;
     background: #7A91A7;
 }
+.saturn-container{
+    position: relative;
+    display: inline-block;
+}
+.saturn-ring{
+position: absolute;
+width: 218.23px;
+height: 5.5px;
+left: -40%;
+top: 50%;
+background: rgba(255, 255, 255, 0.4);
+transform: rotate(-30deg);
+z-index: 999;
+}
+
 
 /* ----- HEADER TITLE ----- */
 
@@ -170,11 +186,27 @@ ul{
 .close-icon:hover{
     color: orangered;
 }
-.active.popup-container{
+/*.hidden.popup{
     visibility: hidden;
     opacity: 0;
     top: 10%
+}*/
+.hidden{
+    display: none;
 }
-.active.planet-container{
-    filter: blur(5px) brightness(0.7);
+
+.overlay{
+    /* MacBook Pro - 2 */
+position: relative;
+width: 1440px;
+height: 900px;
+background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
+color: white;
+font-size: 20px;
+font-style: normal;
+text-align: center;
+}
+#overlay{
+    z-index: 2000;
+    position: fixed;
 }
