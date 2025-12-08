@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solaris Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="Fram6-6"></h1>
+        <img class="Frame-6" src="img/Frame 6.svg" alt="Solaris"> 
+ 
+    </header>
+    <main>
+    <div class="planet-container">
+        <ul>
+            <li class="planet" id="Subtract" data-name="Solen"> <img src="img/Subtract.svg" alt="Sun">Sun</li>
+            <li class="planet" id="Ellipse-2" data-name="Merkurius"> <img src="img/Ellipse 2.svg" alt="Mercury">Mercury</li>
+            <li class="planet" id="Ellipse-3" data-name="Venus"> <img src="img/Ellipse 3.svg" alt="Venus">Venus</li>
+            <li class="planet" id="Ellipse-4" data-name="Jorden"> <img src="img/Ellipse 4.svg" alt="Earth">Earth</li>
+            <li class="planet" id="Ellipse-5" data-name="Mars"> <img src="img/Ellipse 5.svg" alt="Mars">Mars</li>
+            <li class="planet" id="Ellipse-6" data-name="Jupiter"> <img src="img/Ellipse 6.svg" alt="Jupiter">Jupiter</li>
+            <li class="planet" id="Ellipse-7" data-name="Saturnus"> <img src="img/Ellipse 7.svg" alt="Saturn">Saturn</li>
+            <li class="planet" id="Ellipse-8" data-name="Uranus"> <img src="img/Ellipse 8.svg" alt="Uranus">Uranus</li>
+            <li class="planet" id="Ellipse-9" data-name="Neptunus"> <img src="img/Ellipse 9.svg" alt="Neptune">Neptune</li>
+        </ul>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="enter planet">
+        <button class="btn" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+    <section id="overlay" class="overlay hidden">
+        <section id="overlayContent" class="overlayContent">
+            <article id="title">
+                <p id="planetName"></p>
+                <p id="latinName"></p>            
+            </article>
+            <article id="desc">
+                <p id="planetDesc"></p>
+            </article>
+            <article id="infoList">
+                <p id="planetCircumference"></p>
+                <p id="planetDistance"></p>
+                <p id="planetTempDay"></p>
+                <p id="planetTempNight"></p>
+                <p id="planetMoons"></p>
+                <p id="planetRotation"></p>
+                <p id="planetOrbit"></p>
+                <p id="planetId"></p>
+            </article>
+        </section>
+         <div class="close-icon"><i class="fa-solid fa-circle-xmark"></i>
+            </div>
+    </section>
+    </div>
+    </main>
+    <footer>
+        <img class="logo" src="img/Zocom-logo-white 1.svg" alt="Zocom">
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
