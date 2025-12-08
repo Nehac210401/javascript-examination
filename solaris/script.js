@@ -11,9 +11,9 @@ searchBtn.addEventListener("click", function (event){
     getPlanetData();
 })
 
-closeIcon.addEventListener("click", ()=>{
-      container.classList.remove("hidden");
+closeIcon.addEventListener("click", ()=>{ 
       overlay.classList.add("hidden");
+      console.log("hello");
 
 });
 
@@ -61,21 +61,22 @@ planets.forEach (planet => {
     planet.addEventListener("click", async function(){
         const name = planet.dataset.name;
         const data = await getPlanetData(name);
+        overlay.classList.remove("hidden");
         displayPlanetInfo(data);
    });
 
 });
 
-searchBtn.addEventListener("click", async function(){
-   const name = searchInput.value.trim();
-    if (name === ""){
-        searchResult.innerHTML = "Please enter the planet name";
-        return;
-    }
+//searchBtn.addEventListener("click", async function(){
+   //const name = searchInput.value.trim();
+    //if (name === ""){
+     //   searchResult.innerHTML = "Please enter the planet //name";
+      //  return;
+    //}
 
-    const data = await getPlanetData(name);
-    displayPlanetInfo(data);
-});
+   //const data = await getPlanetData(name);
+    //displayPlanetInfo(data);
+//});
 
    function displayPlanetInfo(data) {
     document.getElementById("planetName").innerHTML = data.name;
