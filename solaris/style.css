@@ -1,29 +1,31 @@
+/* Nollställning av standarstilar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* Sidan bakgrund och grundlayout */
 body {
     background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
     width: 1440px;
     height: 100vh;
-    overflow: overflow;
+    overflow:auto;
 }
 /* ------- PLANET CONTAINER (ABSOLUTE POSITIONING) ------- */
 .planet-container {
-    position: relative;      /* IMPORTANT: allows planets to be placed with left/top */
+    position: relative;      /* Viktigt: möjliggör positionering för planeter*/
     width: 100%;
     height: 100%;
 }
 .planet-container ul {
     list-style: none;
-    position: relative;      /* planets positioned inside this */
+    position: relative;      /* Planeter placeras relatvit denna */
 }
 ul{
     list-style: none;
 }
 .planet-container li {
-    position: absolute;      /* REQUIRED to match Figma positions */
+    position: absolute;      /* Krävs för exakt placering enligt Figma positioner */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,13 +33,14 @@ ul{
     background: none;
     border-radius: 50%;
 }
-/* Planet images */
+/* Planet bilder */
 .planet-container img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     border-radius: 60;
 }
+/*Overlay container.*/
 .popup-container{
     position: relative;
     width: 1440px;
@@ -52,15 +55,7 @@ ul{
     transition: all 1s;
     background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
 }
-#searchBtn {
-    padding: 10px 20px;
-    background: #4A6CF7;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-/* ------- PLANET SIZES + POSITIONS FROM FIGMA ------- */
+/* ------- Planetstorlekar +  Figma positioner ------- */
 #Subtract {
     width: 118px;
     height: 740px;
@@ -125,33 +120,36 @@ ul{
     top: 417px;
     background: #7A91A7;
 }
+/*Saturn container och dessa ring*/
 .saturn-container{
     position: relative;
-    display: inline-block;
+    display: inline-block;                       /* Behövs för att ringen ska ligga på planeten */
 }
 .saturn-ring{
-position: absolute;
-width: 218.23px;
-height: 5.5px;
-left: -40%;
-top: 50%;
-background: rgba(255, 255, 255, 0.4);
-transform: rotate(-30deg);
-z-index: 999;
+    position: absolute;
+    width: 218.23px;
+    height: 5.5px;
+    left: -40%;                                     /* Justering så ringen centreras */
+    top: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(-30deg);
+    z-index: 999;                                   /* Ligger ovanpå planeten */
 }
-/* ----- HEADER TITLE ----- */
+/* ----- Header och Logo i toppen ----- */
 .Frame-6 {
     position: absolute;
     left: 747px;
     top: 72px;
 }
-/* ----- FOOTER LOGO ----- */
+/* ----- Footer Logo ----- */
 .logo {
     position: absolute;
     width: 80px;
     left: 703px;
     top: 814px;
 }
+/* Popup/close knapp */
+
 .popup-btn{
     cursor: pointer;
     background-color: orangered;
@@ -166,26 +164,25 @@ z-index: 999;
 .close-icon:hover{
     color: orangered;
 }
-/*.hidden.popup{
-    visibility: hidden;
-    opacity: 0;
-    top: 10%
-}*/
+/* Dölj elements i JS kontoller */
+
 .hidden{
     display: none;
 }
+/* Overlay-Planet info popup */
+
 .overlay{
     /* MacBook Pro - 2 */
-position: relative;
-width: 1440px;
-height: 900px;
-background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
-color: white;
-font-size: 20px;
-font-style: normal;
-text-align: center;
+    position: relative;
+    width: 1440px;
+    height: 900px;
+    background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
 }
 #overlay{
     z-index: 2000;
-    position: fixed;
+    position: fixed;                           /* Ligger över hela sidan */
 }
